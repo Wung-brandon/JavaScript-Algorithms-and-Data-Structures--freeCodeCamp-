@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(3, 3, 49);
+    color: white;
+}
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 4rem;
+}
+.container{
+    margin: 7rem auto;
+    width: 400px;
+    border: 2px solid white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+p{
+    font-size: 1.5rem;
+    text-align: center;
+}
+input{
+    outline: none;
+    height: 20px;
+    padding-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 0;
+}
+button{
+    background-color: rgb(202, 164, 68);
+    color: black;
+    padding: 0.6rem;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    border: 0;
+    cursor: pointer;
+}
