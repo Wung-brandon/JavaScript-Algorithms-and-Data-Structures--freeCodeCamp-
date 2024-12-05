@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f3f4f6;
+  }
+  h1 {
+    color: #333;
+  }
+  #container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+  }
+  input, button {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+  }
+  #check-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  #check-btn:hover {
+    background-color: #45a049;
+  }
+  #result {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+  }
