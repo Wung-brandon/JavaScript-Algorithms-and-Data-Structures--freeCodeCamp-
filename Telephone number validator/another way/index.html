@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Telephone Number Validator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input, button {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>US Telephone Number Validator</h1>
+    <label for="user-input">Enter Phone Number:</label><br>
+    <input type="text" id="user-input" placeholder="Enter a US phone number"><br>
+    <button id="check-btn">Check</button>
+    <button id="clear-btn">Clear</button>
+    <div id="results-div"></div>
+
+    <script>
+        const userInput = document.getElementById("user-input");
+        const checkBtn = document.getElementById("check-btn");
+        const clearBtn = document.getElementById("clear-btn");
+        const resultsDiv = document.getElementById("results-div");
+
+        // Regular expression to validate US phone numbers
+        const phoneRegex = /^(1\s?)?(\(\d{3}\)|\d{3})[-\s]?\d{3}[-\s]?\d{4}$/;
+
+        // Check button click event
+        checkBtn.addEventListener("click", () => {
+            const phoneNumber = userInput.value.trim();
+
+            if (!phoneNumber) {
+                alert("Please provide a phone number");
+                return;
+            }
+
+            if (phoneRegex.test(phoneNumber)) {
+                resultsDiv.textContent = `Valid US number: ${phoneNumber}`;
+            } else {
+                resultsDiv.textContent = `Invalid US number: ${phoneNumber}`;
+            }
+        });
+
+        // Clear button click event
+        clearBtn.addEventListener("click", () => {
+            userInput.value = "";
+            resultsDiv.textContent = "";
+        });
+    </script>
+</body>
+</html>
+
+<!-- 
+^: Start of the string.
+(1\s?)?: Optionally allows the country code 1 followed by a space.
+(\(\d{3}\)|\d{3}): Area code must be in the format (555) or 555.
+[-\s]?: Optional separator (dash or space).
+\d{3}: First three digits of the number.
+[-\s]?: Optional separator (dash or space).
+\d{4}: Last four digits of the number.
+$: End of the string.
+ -->

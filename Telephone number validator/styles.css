@@ -1,0 +1,65 @@
+body{
+    background-color: rgb(58, 53, 61);
+    color: white;
+    
+}
+h1{
+    text-align: center;
+    color: white;
+}
+.container{
+    position: relative;
+    margin: 7rem auto;
+    padding: 4rem 2.5rem;
+    background-color: black;
+    width: 250px;
+    height: 380px;
+    border-radius: 15px;
+}
+.box{
+    background-color: whitesmoke;
+    color: black;
+    padding: 1rem 2rem;
+    width: 200px;
+    height: 350px;
+    /* margin-left: .5rem; */
+    margin-right: 8rem;
+    /* text-align: center; */
+    
+}
+.btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    
+}
+#user-input{
+    /* padding: 0.5rem 2rem; */
+    border: 2px solid black;
+    border-radius: 10px;
+    outline: black;
+    padding: 1rem 1.5rem;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    
+}
+.number{
+    font-size: 20px;
+}
+#check-btn, #clear-btn{
+    background-color: rgb(58, 53, 61);
+    color: white;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
